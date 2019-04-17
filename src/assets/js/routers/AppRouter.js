@@ -4,13 +4,8 @@ import {
 } from 'react-router-dom';
 
 import Home from '../components/Home';
+import About from '../components/About';
 import contents from '../data/content';
-
-const About = () => (
-  <div>
-    <h1>About Page</h1>
-  </div>
-);
 
 const Contact = () => (
   <div className="contact">
@@ -49,10 +44,25 @@ export default () => (
       <Switch>
         <Route
           path="/"
-          render={props => <Home {...props} content={contents.home.content} />}
+          render={props => (
+            <Home
+              {...props}
+              content={contents.home.content}
+            />
+          )}
           exact
         />
-        <Route path="/about" component={About} />
+        <Route
+          path="/about"
+          render={
+            props => (
+              <About
+                {...props}
+                content={contents.about.content}
+              />
+            )
+          }
+        />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
