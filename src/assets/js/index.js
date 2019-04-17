@@ -1,6 +1,10 @@
-import { homeContentGenerator } from '../../home';
-import { aboutContentGenerator } from '../../about';
-import { contactContentGenerator } from '../../contact';
+import { homeContentGenerator } from './home';
+import { aboutContentGenerator } from './about';
+import { contactContentGenerator } from './contact';
+
+require('../scss/main.scss');
+
+require.context('../image', true, /\.(png|svg|jpg|gif)$/);
 
 function generateMainHeader() {
   const header = document.createElement('h1');
