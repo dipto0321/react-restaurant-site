@@ -19,7 +19,7 @@ export function aboutContentGenerator() {
   // Each tab content should have an image
   const image = document.createElement('img');
   image.setAttribute('class', 'content-img');
-  image.setAttribute('src', `./images/${aboutPageContent.image}`);
+  image.setAttribute('src', `assets/images/${aboutPageContent.image}`);
   return {
     contentDiv,
     contentBody,
