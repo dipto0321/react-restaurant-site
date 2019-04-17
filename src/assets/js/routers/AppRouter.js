@@ -6,12 +6,7 @@ import {
 import Home from '../components/Home';
 import About from '../components/About';
 import contents from '../data/content';
-
-const Contact = () => (
-  <div className="contact">
-    <h1> This is contact!</h1>
-  </div>
-);
+import Contact from '../components/Contact';
 
 const Header = () => (
   <header>
@@ -44,26 +39,14 @@ export default () => (
       <Switch>
         <Route
           path="/"
-          render={props => (
-            <Home
-              {...props}
-              content={contents.home.content}
-            />
-          )}
+          render={props => <Home {...props} content={contents.home.content} />}
           exact
         />
         <Route
           path="/about"
-          render={
-            props => (
-              <About
-                {...props}
-                content={contents.about.content}
-              />
-            )
-          }
+          render={props => <About {...props} content={contents.about.content} />}
         />
-        <Route path="/contact" component={Contact} />
+        <Route path="/contact" render={props => <Contact {...props} />} />
         <Route component={NotFound} />
       </Switch>
     </div>
