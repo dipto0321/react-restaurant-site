@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 
 import Home from '../components/Home';
+import contents from '../data/content';
 
 const About = () => (
   <div>
@@ -46,7 +47,11 @@ export default () => (
     <div>
       <Header />
       <Switch>
-        <Route path="/" component={Home} exact />
+        <Route
+          path="/"
+          render={props => <Home {...props} content={contents.home.content} />}
+          exact
+        />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
