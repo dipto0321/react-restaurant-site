@@ -1,17 +1,9 @@
 import React from 'react';
 import {
-  BrowserRouter,
-  Link,
-  NavLink,
-  Route,
-  Switch,
+  BrowserRouter, Link, NavLink, Route, Switch,
 } from 'react-router-dom';
 
-const Home = () => (
-  <div>
-    <h1>Home Page</h1>
-  </div>
-);
+import Home from '../components/Home';
 
 const About = () => (
   <div>
