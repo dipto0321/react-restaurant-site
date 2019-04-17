@@ -1,12 +1,16 @@
 {
-  "name": "restaurant-site",
+  "name": "react-restaurant-site",
   "version": "1.0.0",
   "description": "by [Ryan](https://github.com/rvvergara) and [Dipto](https://github.com/dipto0321)",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development",
+    "dev": "webpack --mode development"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rvvergara/restaurant-site.git"
+    "url": "git+https://github.com/dipto0321/react-restaurant-site.git"
   },
   "author": "Ryan and Dipto",
   "license": "ISC",
@@ -15,7 +19,14 @@
   },
   "homepage": "https://github.com/rvvergara/restaurant-site#readme",
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
     "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3"
-  }
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {}
 }
