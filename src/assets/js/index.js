@@ -1,8 +1,9 @@
 import { homeContentGenerator } from './home';
 import { aboutContentGenerator } from './about';
 import { contactContentGenerator } from './contact';
+import 'normalize.css/normalize.css';
 
-require('../scss/main.scss');
+import '../scss/main.scss';
 
 require.context('../images', true, /\.(png|svg|jpg|gif)$/);
 
