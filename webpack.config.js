@@ -3,6 +3,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
+console.log('Hey this is the env', process.env.NODE_ENV);
+
 const outputDir = devMode ? 'dist' : 'build';
 
 module.exports = {
