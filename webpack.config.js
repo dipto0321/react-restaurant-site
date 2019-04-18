@@ -2,16 +2,11 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const devMode = process.env.NODE_ENV !== 'production';
-console.log('Hey this is the env', process.env.NODE_ENV);
-
-const outputDir = devMode ? 'dist' : 'build';
-
 module.exports = {
   entry: './src/assets/js/index.js',
   output: {
     filename: 'assets/js/[name].bundle.js',
-    path: path.resolve(__dirname, `${outputDir}`),
+    path: path.resolve(__dirname, 'build'),
     publicPath: '/',
   },
   module: {
@@ -22,7 +17,6 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: process.env.NODE_ENV === 'development',
               reloadAll: true,
             },
           },
@@ -51,7 +45,7 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, 'build'),
     host: 'localhost',
     port: '3000',
     historyApiFallback: true,
