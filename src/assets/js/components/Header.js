@@ -1,19 +1,19 @@
 import React from 'react';
-import {
-  NavLink,
-} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default () => (
   <header>
-    <h1>Restaurant Page</h1>
-    <NavLink to="/" activeClassName="active-link" exact>
-      Home
-    </NavLink>
-    <NavLink activeClassName="active-link" to="/about">
-      About
-    </NavLink>
-    <NavLink activeClassName="active-link" to="/contact">
-      Contact
-    </NavLink>
+    <h1 className="mainHeader">Restaurant Page</h1>
+    <div className="tabNav">
+      <NavLink to="/" className="tabLi" exact>
+        Home
+      </NavLink>
+      <NavLink className="tabLi" to="/about">
+        About
+      </NavLink>
+      <NavLink className="tabLi" to="/contact">
+        Contact
+      </NavLink>
+    </div>
   </header>
 );

@@ -1,14 +1,10 @@
 import React from 'react';
 
 export default (props) => {
-  const {
-    tel,
-    email,
-    handleChange,
-  } = props;
+  const { tel, email, handleChange } = props;
   return (
     <form>
-    Telephone:
+      Telephone:
       <br />
       <input
         type="text"
@@ -17,7 +13,7 @@ export default (props) => {
         onChange={e => handleChange(e.target.name, e.target.value)}
       />
       <br />
-    Email:
+      Email:
       <br />
       <input
         type="text"
