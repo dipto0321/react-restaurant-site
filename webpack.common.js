@@ -6,7 +6,6 @@ module.exports = {
   entry: './src/assets/js/index.js',
   output: {
     filename: 'assets/js/[name].bundle.js',
-    path: path.resolve(__dirname, 'build'),
     publicPath: '/',
   },
   module: {
@@ -44,13 +43,6 @@ module.exports = {
       },
     ],
   },
-  devServer: {
-    contentBase: path.resolve(__dirname, 'build'),
-    host: 'localhost',
-    port: '3000',
-    historyApiFallback: true,
-  },
-  devtool: 'cheap-module-eval-source-map',
   plugins: [
     new HtmlWebPackPlugin({
       filename: 'index.html',
