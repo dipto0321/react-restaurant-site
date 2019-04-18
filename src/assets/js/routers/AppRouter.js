@@ -2,35 +2,12 @@ import React from 'react';
 import {
   BrowserRouter, Link, NavLink, Route, Switch,
 } from 'react-router-dom';
-
+import Header from '../components/Header';
 import Home from '../components/Home';
 import About from '../components/About';
 import contents from '../data/content';
 import Contact from '../components/Contact';
-
-const Header = () => (
-  <header>
-    <h1>Restaurant Page</h1>
-    <NavLink to="/" activeClassName="active-link" exact>
-      Home
-    </NavLink>
-    <NavLink activeClassName="active-link" to="/about">
-      About
-    </NavLink>
-    <NavLink activeClassName="active-link" to="/contact">
-      Contact
-    </NavLink>
-  </header>
-);
-
-const NotFound = () => (
-  <div>
-    <h1>404 Error</h1>
-    <h3>
-      <Link to="/">Home</Link>
-    </h3>
-  </div>
-);
+import NotFound from '../components/NotFound';
 
 export default () => (
   <BrowserRouter>
