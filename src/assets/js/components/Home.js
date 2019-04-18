@@ -2,9 +2,11 @@ import React from 'react';
 
 export default (props) => {
   const { content } = props;
+  const { text, imageUrl } = content;
   return (
     <div className="tabContentDiv">
-      <div className="content">{content}</div>
+      <img src={imageUrl} alt="home" />
+      <div className="content">{text}</div>
     </div>
   );
 };

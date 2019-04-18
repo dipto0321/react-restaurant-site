@@ -2,10 +2,11 @@ import faker from 'faker';
 
 const contents = {
   home: {
-    content: faker.lorem.paragraph(),
+    text: faker.lorem.paragraph(),
+    imageUrl: 'assets/images/home.jpg',
   },
   about: {
-    content: faker.lorem.paragraphs(),
+    text: faker.lorem.paragraphs(),
   },
 };
 
