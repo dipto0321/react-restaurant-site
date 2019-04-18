@@ -18,8 +18,11 @@ class Contact extends React.Component {
   }
 
   render() {
+    const { content } = this.props;
+    const { imageUrl } = content;
     return (
       <div className="tabContentDiv">
+        <img className="content-img" src={imageUrl} alt="contact-map" />
         <div className="content">
           <Form
             telephone={this.state.telephone}

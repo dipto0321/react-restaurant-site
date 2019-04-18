@@ -13,8 +13,11 @@ export default () => (
       <Header />
       <Switch>
         <Route path="/" render={props => <Home {...props} content={contents.home} />} exact />
-        <Route path="/about" render={props => <About {...props} content={contents.about.text} />} />
-        <Route path="/contact" render={props => <Contact {...props} />} />
+        <Route path="/about" render={props => <About {...props} content={contents.about} />} />
+        <Route
+          path="/contact"
+          render={props => <Contact {...props} content={contents.contact} />}
+        />
         <Route component={NotFound} />
       </Switch>
     </div>

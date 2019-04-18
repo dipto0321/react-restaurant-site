@@ -1,14 +1,12 @@
 import React from 'react';
 
 export default (props) => {
-  const {
-    content,
-  } = props;
+  const { content } = props;
+  const { text, imageUrl } = content;
   return (
     <div className="tabContentDiv">
-      <div className="content">
-        { content }
-      </div>
+      <img className="content-img" src={imageUrl} alt="about" />
+      <div className="content">{text}</div>
     </div>
   );
 };

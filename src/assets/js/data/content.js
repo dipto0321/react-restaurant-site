@@ -7,6 +7,10 @@ const contents = {
   },
   about: {
     text: faker.lorem.paragraphs(),
+    imageUrl: 'assets/images/about.jpg',
+  },
+  contact: {
+    imageUrl: 'assets/images/map.png',
   },
 };
 
