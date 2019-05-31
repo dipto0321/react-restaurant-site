@@ -6,17 +6,26 @@ import About from '../components/About';
 import contents from '../data/content';
 import Contact from '../components/Contact';
 import NotFound from '../components/NotFound';
+import withContent from '../components/withContent';
 
 export default () => (
   <BrowserRouter>
     <div>
       <Header />
       <Switch>
-        <Route path="/" render={props => <Home {...props} content={contents.home} />} exact />
-        <Route path="/about" render={props => <About {...props} content={contents.about} />} />
+        <Route
+          path="/"
+          component={withContent('', Home)}
+          exact
+        />
+        <Route
+          path="/about"
+          component={withContent('about', About)}
+        />
+
         <Route
           path="/contact"
-          render={props => <Contact {...props} content={contents.contact} />}
+          component={withContent('contact', Contact)}
         />
         <Route component={NotFound} />
       </Switch>
